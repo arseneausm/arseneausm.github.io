@@ -12,7 +12,6 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
-
 		<!-- Header -->
 			<section id="header">
 				<header class="major">
@@ -23,6 +22,19 @@
 
 			</section>
 
+			<section id="one" class="main special">
+				<div class="container">
+					<span class="image fit primary"><img src="images/ridge.jpg" alt="" /></span>
+					<div class="content">
+						<header class="major">
+							<h2>Who I am</h2>
+						</header>
+						<p>I am a student at Johns Hopkins University majoring in mathematics and physics. I work for the CLASS Telescope under Prof. Tobias Marriage as well as on observational astronomy projects involving gravitational redshifts with Prof. Nadia Zakamska.</p>
+					</div>
+				</div>
+			</section>
+
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -31,6 +43,26 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				var slideIndex = 1;
+				showDivs(slideIndex);
+
+				function plusDivs(n) {
+  					showDivs(slideIndex += n);
+				}			
+
+				function showDivs(n) {
+  					var i;
+  					var x = document.getElementsByClassName("test");
+  					if (n > x.length) {slideIndex = 1}
+  					if (n < 1) {slideIndex = x.length}
+  					for (i = 0; i < x.length; i++) {
+    						x[i].style.display = "none";  
+  					}
+  					x[slideIndex-1].style.display = "block";  
+				}
+			</script>
 
 	</body>
 </html>
